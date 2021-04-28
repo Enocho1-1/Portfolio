@@ -1,0 +1,237 @@
+/* =================================
+  Base Element Styles
+==================================== */
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8em;
+  line-height: 1.6;
+  color: white;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: white;
+}
+
+img {
+  display: block;
+}
+
+
+
+/* =================================
+  Base Layout Styles
+==================================== */
+/* ---- Navigation ---- */
+
+.nav-menu {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin-top: 5px;
+  font-size: 1.125em ;
+  text-transform: uppercase;
+}
+
+.nav-menu li {
+  list-style: none;
+  padding: 12px;
+}
+
+.nav-menu a:link {
+  color: white;
+}
+.nav-menu a:hover {
+  color: gray;
+}
+
+.nav-menu a:visited {
+  color: #262b20;
+}
+
+
+/* ---- Layout Containers ---- */
+.main-header {
+  width: 100%;
+  background: #be3144;
+  padding: 0.5px;
+  margin: 0;
+  position: fixed;
+}
+
+.main-footer {
+  background: #303841;
+  text-align: center;
+  font-size: 1em;
+  padding: 45px;
+
+
+}
+.primary-box {
+  background-color: gray;
+  background-image: linear-gradient(to bottom right, gray, black);
+  /* height: 600px; */
+  margin-top: 0;
+  padding:200px;
+  text-align: center;
+}
+
+.secondary-box {
+  background: #45567d;
+  /* height:1000px; */
+  padding: 120px;
+
+}
+
+/* ---- Page Elements ---- */
+#intro-style {
+  color:#be3144;
+  font-style: oblique;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 50px;
+  padding-bottom: .2em;
+  border-bottom: 0.5px solid white;
+  margin-bottom: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.project {
+  background: black;
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 2px;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+  text-align: center;
+}
+
+.code {
+  color: black;
+  transition: color 0.3s ease-out;
+  text-align: center;
+}
+
+
+.project:hover .code {
+  color: #ff7f50;
+}
+
+.footer-menu {
+  display: inline;
+  list-style: none;
+
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* max-width: 980px; */
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media(max-width:1024px) {
+
+
+  .primary-box {
+    /* display: none; */
+    padding: 15% 15%;
+    font-size: 0.9375em;
+
+  }
+}
+
+@media (max-width: 490px) {
+
+  .nav-menu,
+  .primary-box {
+    font-size: 0.625em;
+  }
+
+  /* .primary-box {
+    font-size: 0.9375em;
+  } */
+
+  .secondary-box {
+    padding: 6rem 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 460px) {
+  .nav-menu {
+
+    justify-content: center;
+
+  }
+  .title {
+    font-size: 15px;
+    border-bottom: none;
+  }
+  .main-footer {
+    /* position: fixed;
+    font-size: 1rem;
+  }
+
+  .contact-links {
+    flex-direction: column;
+  }
+}
